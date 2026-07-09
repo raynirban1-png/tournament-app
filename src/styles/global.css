@@ -343,6 +343,13 @@ h3 {
   margin: 4px 0 0;
 }
 
+.btn-upi {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 8px;
+}
+
 /* ---------- admin shell ---------- */
 
 .admin-header {

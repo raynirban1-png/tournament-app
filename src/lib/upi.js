@@ -2,8 +2,8 @@
 // can scan/open this and pre-fill the payee, amount and note — no backend
 // or payment gateway account required.
 export function buildUpiLink({ amount, note } = {}) {
-  const pa = import.meta.env.VITE_UPI_ID
-  const pn = import.meta.env.VITE_UPI_PAYEE_NAME || 'Tournament'
+  const pa = import.meta.env.VITE_UPI_ID || 'anupamroy.dream@okicici'
+  const pn = import.meta.env.VITE_UPI_PAYEE_NAME || 'Anupam Ray'
 
   if (!pa) return null
 

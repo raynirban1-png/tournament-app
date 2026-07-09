@@ -68,6 +68,12 @@ export default function RegisterPage() {
               <QrCode value={upiLink} />
               <p className="fee">{formatCurrency(fee)}</p>
               <p className="muted small">Scan with any UPI app — GPay, PhonePe, Paytm, etc.</p>
+              {upiLink && (
+                <a className="btn-primary btn-upi" href={upiLink}>
+                  Pay via UPI app
+                </a>
+              )}
+              <p className="muted small">On a phone? Tap the button above to pay directly.</p>
             </div>
           )}
 
