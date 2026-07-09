@@ -36,12 +36,12 @@ jobs:
           # These must be added under Settings -> Secrets and variables -> Actions.
           # Repository Variables (not secrets) work fine too, since the anon key
           # is safe to expose client-side - it's protected by RLS.
-          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
-          VITE_UPI_ID: ${{ vars.VITE_UPI_ID }}
-          VITE_UPI_PAYEE_NAME: ${{ vars.VITE_UPI_PAYEE_NAME }}
-          VITE_TOURNAMENT_NAME: ${{ vars.VITE_TOURNAMENT_NAME }}
-          VITE_REGISTRATION_FEE: ${{ vars.VITE_REGISTRATION_FEE }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_UPI_ID: ${{ secrets.VITE_UPI_ID }}
+          VITE_UPI_PAYEE_NAME: ${{ secrets.VITE_UPI_PAYEE_NAME }}
+          VITE_TOURNAMENT_NAME: ${{ secrets.VITE_TOURNAMENT_NAME }}
+          VITE_REGISTRATION_FEE: ${{ secrets.VITE_REGISTRATION_FEE }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
